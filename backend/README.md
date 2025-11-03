@@ -14,17 +14,47 @@ This is the backend API service for the ATDD Accelerator Template, built with Ja
 - `GET /api/echo` - Returns "Echo" for health check
 - `GET /api/todos/{id}` - Fetches a todo item by ID
 
+## Instructions
 
+Open up the 'backend' folder
+
+```shell
+cd backend
+```
+
+Check that you have Powershell 7
+
+```shell
+$PSVersionTable.PSVersion
+```
+
+Ensure you have JDK 21 installed
+
+```shell
+java -version
+```
+
+Check that JAVA_HOME is set correctly & points to your JDK 21 installation
+
+```shell
+echo $env:JAVA_HOME
+```
+
+Ensure you have Gradle 8.14 installed
+
+```shell
+./gradlew --version
+```
 
 ## Building
 
-```bash
+```shell
 ./gradlew build
 ```
 
 ## Running Locally
 
-```bash
+```shell
 ./gradlew bootRun
 ```
 
@@ -34,13 +64,13 @@ The service will start on port 8081.
 
 Build the Docker image:
 
-```bash
+```shell
 docker build -t backend .
 ```
 
 Run the container:
 
-```bash
+```shell
 docker run -p 8081:8081 backend
 ```
 
